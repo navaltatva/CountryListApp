@@ -1,0 +1,253 @@
+
+[
+  {
+    "name": "India",
+    "capital": "New Delhi",
+    "currencies": [{"code": "INR", "name": "Indian rupee", "symbol": "₹"}],
+    "alpha2Code": "IN",
+    "region": "Asia",
+    "population": 1380004385,
+    "area": 3287590.0,
+    "flag": "🇮🇳"
+  },
+  {
+    "name": "United States of America",
+    "capital": "Washington, D.C.",
+    "currencies": [{"code": "USD", "name": "United States dollar", "symbol": "$"}],
+    "alpha2Code": "US",
+    "region": "Americas",
+    "population": 329484123,
+    "area": 9629091.0,
+    "flag": "🇺🇸"
+  },
+  {
+    "name": "United Kingdom",
+    "capital": "London",
+    "currencies": [{"code": "GBP", "name": "British pound", "symbol": "£"}],
+    "alpha2Code": "GB",
+    "region": "Europe",
+    "population": 67886011,
+    "area": 242495.0,
+    "flag": "🇬🇧"
+  },
+  {
+    "name": "Germany",
+    "capital": "Berlin",
+    "currencies": [{"code": "EUR", "name": "Euro", "symbol": "€"}],
+    "alpha2Code": "DE",
+    "region": "Europe",
+    "population": 83240525,
+    "area": 357114.0,
+    "flag": "🇩🇪"
+  },
+  {
+    "name": "France",
+    "capital": "Paris",
+    "currencies": [{"code": "EUR", "name": "Euro", "symbol": "€"}],
+    "alpha2Code": "FR",
+    "region": "Europe",
+    "population": 67391582,
+    "area": 640679.0,
+    "flag": "🇫🇷"
+  },
+  {
+    "name": "Japan",
+    "capital": "Tokyo",
+    "currencies": [{"code": "JPY", "name": "Japanese yen", "symbol": "¥"}],
+    "alpha2Code": "JP",
+    "region": "Asia",
+    "population": 125836021,
+    "area": 377930.0,
+    "flag": "🇯🇵"
+  },
+  {
+    "name": "Australia",
+    "capital": "Canberra",
+    "currencies": [{"code": "AUD", "name": "Australian dollar", "symbol": "$"}],
+    "alpha2Code": "AU",
+    "region": "Oceania",
+    "population": 25687041,
+    "area": 7692024.0,
+    "flag": "🇦🇺"
+  },
+  {
+    "name": "Brazil",
+    "capital": "Brasília",
+    "currencies": [{"code": "BRL", "name": "Brazilian real", "symbol": "R$"}],
+    "alpha2Code": "BR",
+    "region": "Americas",
+    "population": 212559417,
+    "area": 8515767.0,
+    "flag": "🇧🇷"
+  },
+  {
+    "name": "Canada",
+    "capital": "Ottawa",
+    "currencies": [{"code": "CAD", "name": "Canadian dollar", "symbol": "$"}],
+    "alpha2Code": "CA",
+    "region": "Americas",
+    "population": 38005238,
+    "area": 9984670.0,
+    "flag": "🇨🇦"
+  },
+  {
+    "name": "China",
+    "capital": "Beijing",
+    "currencies": [{"code": "CNY", "name": "Chinese yuan", "symbol": "¥"}],
+    "alpha2Code": "CN",
+    "region": "Asia",
+    "population": 1439323776,
+    "area": 9596961.0,
+    "flag": "🇨🇳"
+  },
+  {
+    "name": "Mexico",
+    "capital": "Mexico City",
+    "currencies": [{"code": "MXN", "name": "Mexican peso", "symbol": "$"}],
+    "alpha2Code": "MX",
+    "region": "Americas",
+    "population": 128932753,
+    "area": 1964375.0,
+    "flag": "🇲🇽"
+  },
+  {
+    "name": "Italy",
+    "capital": "Rome",
+    "currencies": [{"code": "EUR", "name": "Euro", "symbol": "€"}],
+    "alpha2Code": "IT",
+    "region": "Europe",
+    "population": 60317116,
+    "area": 301336.0,
+    "flag": "🇮🇹"
+  },
+  {
+    "name": "South Korea",
+    "capital": "Seoul",
+    "currencies": [{"code": "KRW", "name": "South Korean won", "symbol": "₩"}],
+    "alpha2Code": "KR",
+    "region": "Asia",
+    "population": 51780579,
+    "area": 100210.0,
+    "flag": "🇰🇷"
+  },
+  {
+    "name": "Spain",
+    "capital": "Madrid",
+    "currencies": [{"code": "EUR", "name": "Euro", "symbol": "€"}],
+    "alpha2Code": "ES",
+    "region": "Europe",
+    "population": 47351567,
+    "area": 505992.0,
+    "flag": "🇪🇸"
+  },
+  {
+    "name": "Russia",
+    "capital": "Moscow",
+    "currencies": [{"code": "RUB", "name": "Russian ruble", "symbol": "₽"}],
+    "alpha2Code": "RU",
+    "region": "Europe",
+    "population": 144104080,
+    "area": 17098242.0,
+    "flag": "🇷🇺"
+  },
+  {
+    "name": "Netherlands",
+    "capital": "Amsterdam",
+    "currencies": [{"code": "EUR", "name": "Euro", "symbol": "€"}],
+    "alpha2Code": "NL",
+    "region": "Europe",
+    "population": 17441139,
+    "area": 41850.0,
+    "flag": "🇳🇱"
+  },
+  {
+    "name": "Switzerland",
+    "capital": "Bern",
+    "currencies": [{"code": "CHF", "name": "Swiss franc", "symbol": "Fr"}],
+    "alpha2Code": "CH",
+    "region": "Europe",
+    "population": 8703405,
+    "area": 41285.0,
+    "flag": "🇨🇭"
+  },
+  {
+    "name": "Sweden",
+    "capital": "Stockholm",
+    "currencies": [{"code": "SEK", "name": "Swedish krona", "symbol": "kr"}],
+    "alpha2Code": "SE",
+    "region": "Europe",
+    "population": 10353442,
+    "area": 450295.0,
+    "flag": "🇸🇪"
+  },
+  {
+    "name": "Norway",
+    "capital": "Oslo",
+    "currencies": [{"code": "NOK", "name": "Norwegian krone", "symbol": "kr"}],
+    "alpha2Code": "NO",
+    "region": "Europe",
+    "population": 5421242,
+    "area": 323802.0,
+    "flag": "🇳🇴"
+  },
+  {
+    "name": "Denmark",
+    "capital": "Copenhagen",
+    "currencies": [{"code": "DKK", "name": "Danish krone", "symbol": "kr"}],
+    "alpha2Code": "DK",
+    "region": "Europe",
+    "population": 5831404,
+    "area": 43094.0,
+    "flag": "🇩🇰"
+  },
+  {
+    "name": "Singapore",
+    "capital": "Singapore",
+    "currencies": [{"code": "SGD", "name": "Singapore dollar", "symbol": "$"}],
+    "alpha2Code": "SG",
+    "region": "Asia",
+    "population": 5685807,
+    "area": 719.0,
+    "flag": "🇸🇬"
+  },
+  {
+    "name": "New Zealand",
+    "capital": "Wellington",
+    "currencies": [{"code": "NZD", "name": "New Zealand dollar", "symbol": "$"}],
+    "alpha2Code": "NZ",
+    "region": "Oceania",
+    "population": 5084300,
+    "area": 268838.0,
+    "flag": "🇳🇿"
+  },
+  {
+    "name": "South Africa",
+    "capital": "Cape Town",
+    "currencies": [{"code": "ZAR", "name": "South African rand", "symbol": "R"}],
+    "alpha2Code": "ZA",
+    "region": "Africa",
+    "population": 59308690,
+    "area": 1221037.0,
+    "flag": "🇿🇦"
+  },
+  {
+    "name": "Argentina",
+    "capital": "Buenos Aires",
+    "currencies": [{"code": "ARS", "name": "Argentine peso", "symbol": "$"}],
+    "alpha2Code": "AR",
+    "region": "Americas",
+    "population": 45376763,
+    "area": 2780400.0,
+    "flag": "🇦🇷"
+  },
+  {
+    "name": "Israel",
+    "capital": "Jerusalem",
+    "currencies": [{"code": "ILS", "name": "Israeli new shekel", "symbol": "₪"}],
+    "alpha2Code": "IL",
+    "region": "Asia",
+    "population": 9449323,
+    "area": 20770.0,
+    "flag": "🇮🇱"
+  }
+]

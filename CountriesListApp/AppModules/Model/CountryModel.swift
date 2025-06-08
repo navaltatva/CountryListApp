@@ -29,7 +29,7 @@ struct Country: Codable, Identifiable, Equatable {
 }
 
 struct Currency: Codable {
-    let code: String?
-    let name: String?
+    let code: String
+    let name: String
     let symbol: String?
 }

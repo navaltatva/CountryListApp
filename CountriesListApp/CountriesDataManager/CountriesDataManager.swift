@@ -25,6 +25,17 @@ class CountriesDataManager: ObservableObject {
     private func loadCountriesFromJSON() {
         isLoading = true
         
+        // First try to load from bundle, then fallback to embedded data
+        if let path = Bundle.main.path(forResource: "countries", ofType: "json"),
+           let data = NSData(contentsOfFile: path) as Data? {
+            parseCountriesData(data)
+        } else {
+            // Fallback to embedded sample data
+            loadEmbeddedCountriesData()
+        }
+    }
+    
+    private func loadEmbeddedCountriesData() {
         // Sample countries data (you can replace this with your JSON file)
         let jsonData = """
         [
@@ -131,16 +142,22 @@ class CountriesDataManager: ObservableObject {
         ]
         """.data(using: .utf8)!
         
+        parseCountriesData(jsonData)
+    }
+    
+    private func parseCountriesData(_ data: Data) {
         do {
-            let decodedCountries = try JSONDecoder().decode([Country].self, from: jsonData)
+            let decodedCountries = try JSONDecoder().decode([Country].self, from: data)
             DispatchQueue.main.async {
                 self.countries = decodedCountries
                 self.isLoading = false
+                print("Successfully loaded \\(decodedCountries.count) countries")
             }
         } catch {
             DispatchQueue.main.async {
                 self.errorMessage = "Failed to load countries data: \\(error.localizedDescription)"
                 self.isLoading = false
+                print("Error loading countries: \\(error)")
             }
         }
     }

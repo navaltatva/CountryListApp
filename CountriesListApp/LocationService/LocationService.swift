@@ -9,15 +9,15 @@ import Foundation
 import CoreLocation
 
 // MARK: - Location Service
-class LocationService: NSObject, ObservableObject {
+class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
-    @Published var userLocation: CLLocation?
-    @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
+    @Published var userCountryCode: String?
+    @Published var locationPermissionDenied = false
     
     override init() {
         super.init()
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
     }
     
     func requestLocation() {
@@ -25,42 +25,42 @@ class LocationService: NSObject, ObservableObject {
         locationManager.requestLocation()
     }
     
-    func getCountryFromLocation() -> String? {
-        guard let location = userLocation else { return nil }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else { return }
         
         let geocoder = CLGeocoder()
-        var countryCode: String?
-        let semaphore = DispatchSemaphore(value: 0)
-        
-        geocoder.reverseGeocodeLocation(location) { placemarks, error in
-            if let placemark = placemarks?.first {
-                countryCode = placemark.isoCountryCode
+        geocoder.reverseGeocodeLocation(location) { [weak self] placemarks, error in
+            DispatchQueue.main.async {
+                if let countryCode = placemarks?.first?.isoCountryCode {
+                    self?.userCountryCode = countryCode
+                } else {
+                    self?.userCountryCode = "IN" // Default to India
+                }
             }
-            semaphore.signal()
         }
-        
-        semaphore.wait()
-        return countryCode
-    }
-}
-
-extension LocationService: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        userLocation = locations.first
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Location error: \(error.localizedDescription)")
+        DispatchQueue.main.async {
+            self.userCountryCode = "IN" // Default to India
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        authorizationStatus = status
-        
         switch status {
+        case .denied, .restricted:
+            DispatchQueue.main.async {
+                self.locationPermissionDenied = true
+                self.userCountryCode = "IN" // Default to India
+            }
         case .authorizedWhenInUse, .authorizedAlways:
             locationManager.requestLocation()
-        default:
-            break
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        @unknown default:
+            DispatchQueue.main.async {
+                self.userCountryCode = "IN" // Default to India
+            }
         }
     }
 }
