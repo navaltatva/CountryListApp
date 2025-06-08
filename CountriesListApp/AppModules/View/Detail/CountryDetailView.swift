@@ -53,7 +53,7 @@ struct CountryDetailView: View {
                     if let area = country.area {
                         DetailRowView(
                             title: "Area",
-                            value: "\\(NumberFormatter.localizedString(from: NSNumber(value: area), number: .decimal)) km²",
+                            value: "\(NumberFormatter.localizedString(from: NSNumber(value: area), number: .decimal)) km²",
                             icon: "map"
                         )
                     }
