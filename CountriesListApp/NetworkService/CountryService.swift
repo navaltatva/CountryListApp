@@ -25,8 +25,7 @@ class CountryService: ObservableObject {
         guard !query.isEmpty else { return countries }
         
         return countries.filter { country in
-            country.name.localizedCaseInsensitiveContains(query) //||
-           //country.displayCapital.localizedCaseInsensitiveContains(query)
+            country.name.localizedCaseInsensitiveContains(query)
         }
     }
 }
