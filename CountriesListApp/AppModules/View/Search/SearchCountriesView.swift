@@ -41,20 +41,3 @@ struct SearchCountriesView: View {
         }
     }
 }
-
-extension SearchCountriesView {
-    struct SearchBar: View {
-        @Binding var text: String
-        
-        var body: some View {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                    .foregroundColor(.secondary)
-                
-                TextField("Search countries or capitals...", text: $text)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-            }
-            .padding(.horizontal)
-        }
-    }
-}
