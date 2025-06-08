@@ -11,6 +11,7 @@ extension SearchCountriesView {
     struct CountrySearchRowView: View {
         let country: Country
         let onAdd: () -> Void
+        @StateObject private var dataManager = CountriesDataManager()
         
         var body: some View {
             HStack {
@@ -37,12 +38,14 @@ extension SearchCountriesView {
                 }
                 
                 Spacer()
-                
-                Button(action: onAdd) {
-                    Image(systemName: "plus.circle.fill")
-                        .foregroundColor(.blue)
-                        .font(.title2)
+                if !(dataManager.savedCountries.contains(country)) {
+                    Button(action: onAdd) {
+                        Image(systemName: "plus.circle.fill")
+                            .foregroundColor(.blue)
+                            .font(.title2)
+                    }
                 }
+                
             }
             .padding(.vertical, 4)
         }
