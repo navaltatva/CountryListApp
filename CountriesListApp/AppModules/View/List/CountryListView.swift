@@ -95,7 +95,7 @@ struct CountryListView: View {
     
     private var footerView: some View {
         VStack(spacing: 8) {
-            Text("\\(dataManager.savedCountries.count)/5 countries added")
+            Text("\(dataManager.savedCountries.count)/5 countries added")
                 .font(.caption)
                 .foregroundColor(.secondary)
             
