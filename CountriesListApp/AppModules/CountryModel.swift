@@ -8,24 +8,23 @@
 import Foundation
 
 // MARK: - Models
-struct Country: Codable, Identifiable {
+struct Country: Codable, Identifiable, Equatable {
+    let id = UUID()
     let name: String
-    let capital: String?
+    let capital: String
+    let currencies: [Currency]
     let alpha2Code: String
-    let currencies: [Currency]?
+    let region: String
+    let population: Int
+    let area: Double?
+    let flag: String
     
-    var id: String { alpha2Code }
-    
-    var displayCapital: String {
-        capital ?? "N/A"
+    enum CodingKeys: String, CodingKey {
+        case name, capital, currencies, alpha2Code, region, population, area, flag
     }
     
-    var displayCurrency: String {
-        currencies?.first?.name ?? "N/A"
-    }
-    
-    var displayCurrencyCode: String {
-        currencies?.first?.code ?? "N/A"
+    static func == (lhs: Country, rhs: Country) -> Bool {
+        return lhs.alpha2Code == rhs.alpha2Code
     }
 }
 
